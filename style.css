@@ -1,0 +1,87 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: burlywood;
+    padding: 30px;
+}
+
+h1{
+    color: brown;
+    background-color: pink;
+    font-style: italic;
+    font-family: 'Times New Roman', 'Arial';
+}
+
+#gameBoard{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    align-items: start;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px; /* Enables 3D space for the flip effect */
+}
+
+.card .front, .card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.5s; /* Smooth transition for the flip effect */
+}
+
+.card .front {
+    background-color: #f0f0f0; /* Or an image background */
+    transform: rotateY(180deg); /* Initially hide the front face */
+    backface-visibility: hidden; 
+}
+
+.card .front img {
+    width: 100%;            /* Make the image fill the width of the card */
+    height: 100%;           /* Make the image fill the height of the card */
+    object-fit: contain;    /* Maintain aspect ratio and show the entire image */
+}
+
+.card .back {
+    background-color: #ccc;
+    transform: rotateY(0deg); /* Initially show the back face */
+}
+
+/* Flip the card */
+.card.flipped .front {
+    transform: rotateY(0deg); /* Show the front face */
+}
+
+.card.flipped .back {
+    transform: rotateY(180deg); /* Hide the back face */
+    backface-visibility: hidden; /* Hide the back face when flipped */
+}
+
+h1 #score{
+    font-family: Helvetica, sans-serif;
+    color: rgb(128, 107, 13);
+    
+}
+
+/* Start Button Styling */
+#start {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #8c2d2d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #start:hover {
+    background-color: #5b4529;
+  }
+#score {
+    font-size: 20px;
+    margin: 20px 0;
+}
