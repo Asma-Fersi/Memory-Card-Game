@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmKEKAdzbGWWNdxPwnAE0eObIP08oJNTlQ3hSU1_PLRIgRTpO' ,
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMmYWQIUyU1ok_c32a2bYYl3Rk7M-p5FHVqiazsztJ48GpLG5' ,
         'https://media.licdn.com/dms/image/v2/D4E22AQFVKsn5we1loA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1712601088547?e=2147483647&v=beta&t=oKXgatJ8MZV-WVH1lraOlbplPGDZdzksbTlAjWir2IE' ,
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqNLEUiKpcRX8c19o52eJWlz_nXGTEzv5zg&s'
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqNLEUiKpcRX8c19o52eJWlz_nXGTEzv5zg&s',
+        'https://i.pinimg.com/736x/08/af/17/08af176fb062281fc1e44a1635d62e13.jpg'
     ]
     
 
