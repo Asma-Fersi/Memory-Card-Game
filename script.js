@@ -1,14 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
     const startButton = document.getElementById('start');
+    const hereButton = document.getElementById('here');
     const gameBoard = document.getElementById('gameBoard');
+    const scoreDisplay = document.getElementById('score');  // Get the score element
 
     let images = [];
     let cards = [];
     let firstCard, secondCard;
     let locked = false;
     let score = 0;
-    const scoreDisplay = document.getElementById('score');  // Get the score element
+
+    const predefinedImages = [
+        'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR_8piLHH4Zh9prjS9Bs8VKJUUFi6LNnLb41lsEASkozJ-z7601' ,
+        'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTfkSCrVMmntkRJK9_J69rSsRSrFX95kRb-SeS0IUxk115N0BCm' ,
+        'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTsaxOgb-ThwEfPxyrniyen7A8H57bDytIecoL3TWFMhdFQBWwD',
+        'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRavDfG06qYur-fc_RCOm6OnRfuDHIyAXI2SXTmNaXdd62_WyR1',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEmKEKAdzbGWWNdxPwnAE0eObIP08oJNTlQ3hSU1_PLRIgRTpO' ,
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMmYWQIUyU1ok_c32a2bYYl3Rk7M-p5FHVqiazsztJ48GpLG5' ,
+        'https://media.licdn.com/dms/image/v2/D4E22AQFVKsn5we1loA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1712601088547?e=2147483647&v=beta&t=oKXgatJ8MZV-WVH1lraOlbplPGDZdzksbTlAjWir2IE' ,
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCqNLEUiKpcRX8c19o52eJWlz_nXGTEzv5zg&s'
+    ]
+    
 
 
     fileInput.addEventListener('change', (event) => {
@@ -18,6 +31,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: index  // Use the index as an identifier
         }));
     });
+
+    hereButton.addEventListener('click', () => {
+        images = predefinedImages.map((imagePath, index) => ({
+            url: imagePath,  // Directly use the image path as URL
+            id: index  // Use the index as an identifier
+        })); 
+    });   
 
     startButton.addEventListener('click', () => {
          
@@ -126,8 +146,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 500);
             initializeGame();
         }
-    }
-    
-    
+    }  
 });
-    
